@@ -8,7 +8,7 @@
     <h1>Environment Variable Value:</h1>
     <p>${MY_ENV_VAR}</p>
     
-    <h1>My Server Hostname:</h1>
+    <h1>Demo Server Hostname:</h1>
     <p>${HOSTNAME}</p>
 </body>
 </html>
