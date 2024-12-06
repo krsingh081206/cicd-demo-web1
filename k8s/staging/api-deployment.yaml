@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+
+kind: Deployment
+
+metadata:
+  name: nginx-deployment
+  namespace: stage
+  labels:
+    app: nginx-deployment
+
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nginx-pod
+
+  template:
+    metadata:
+      name: nginx-pod
+      labels:
+        app: nginx-pod
+
+    spec:
+      topologySpreadConstraints:
+      - maxSkew: 1
+        topologyKey: "topology.kubernetes.io/zone"
+        whenUnsatisfiable: ScheduleAnyway
+        labelSelector:
+          matchLabels:
+            app: nginx-pod
+      containers:
+        - name: nginx-container
+          image: nginxbackend
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80
+          envFrom:
+            - configMapRef:
+                name: nginx-backend-config          

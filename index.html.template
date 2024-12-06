@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Environment Variable and Hostname Display</title>
+</head>
+<body>
+    <h1>Environment Variable Value:</h1>
+    <p>${MY_ENV_VAR}</p>
+    
+    <h1>My Server Hostname:</h1>
+    <p>${HOSTNAME}</p>
+</body>
+</html>
