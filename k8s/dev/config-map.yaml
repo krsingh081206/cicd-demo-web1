@@ -4,5 +4,5 @@ metadata:
   name: nginx-backend-config
   namespace: dev
 data:
-  MY_ENV_VAR : 'DEVELOPMENT'
+  MY_ENV_VAR : 'DEVELOPMENT-123'
 
