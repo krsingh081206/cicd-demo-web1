@@ -1,0 +1,31 @@
+@startmindmap
+<style>
+mindmapDiagram {
+  node {
+    BackgroundColor lightGreen
+  }
+ :depth(1) {
+      BackGroundColor Orange
+    }
+}
+</style>
+* GITOPS
+** Source Repo => Github
+** IaC => Terraform
+*** InfraState => GCS
+**** DB => AlloyDB
+**** NETWORK => VPC
+**** APP-TIER => GKE
+**** WEB-TIER => GCP LoadBalancer
+** CI => Cloud Build
+*** RepoIntegration => Github
+*** Setup Build Trigger
+** CD => Cloud Deploy
+*** Setup => Delivery Pipeline
+*** Setup => Target
+*** Setup => Skaffold
+** App Deployment => GKE
+*** Deployment
+*** Services
+*** HPA
+@endmindmap
