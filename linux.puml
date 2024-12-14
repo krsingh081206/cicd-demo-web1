@@ -1,4 +1,8 @@
+@startuml
 @startmindmap
+caption GITOPS
+title GITOPS IMPLEMENTATION WITH GCP
+
 <style>
 mindmapDiagram {
   node {
@@ -7,6 +11,12 @@ mindmapDiagram {
  :depth(1) {
       BackGroundColor Orange
     }
+  :depth(2) {
+      BackGroundColor LightGoldenRodYellow
+    }
+  :depth(3) {
+      BackGroundColor LightCoral
+    }      
 }
 </style>
 * GITOPS
@@ -29,3 +39,4 @@ mindmapDiagram {
 *** Services
 *** HPA
 @endmindmap
+@enduml
